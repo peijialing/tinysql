@@ -86,7 +86,7 @@ func DecodeRecordKey(key kv.Key) (tableID int64, handle int64, err error) {
 		err = errInvalidIndexKey.GenWithStack("invalid index key - %q %v", key, err)
 		return 0, 0, err
 	}
-	return tableID, handle, nil
+	return tableID, handle, err
 }
 
 // appendTableIndexPrefix appends table index prefix  "t[tableID]_i".
